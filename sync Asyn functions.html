@@ -1,0 +1,22 @@
+<script>
+    
+//?   synchronous function
+
+var data=fs.readFileSync('Sample1.txt')
+console.log(data.tostring())
+
+
+//?  Asynchronous read with call back function
+
+
+fs.readFile('Sample1.txt',function(err,data){
+
+    if (err){
+        return console.error(err);
+
+    }
+ console.log("The file content is +data.tostring()");
+
+});
+
+</script>
